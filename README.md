@@ -4,13 +4,15 @@ git clone git@github.com:mitrecx/mitre2019.git
 
 git submodule init
 
-git submodule update --init --recursive
+git submodule update --remote --recursive
 ```
 
 或者直接:   
 ```shell script
 git clone --recursive https://github.com/chaconinc/MainProject
 ```
+
+
 
 如果想要在子模块中查看新工作,  
 可以进入到目录中运行 <code>git fetch</code> 与 <code>git merge</code>,  
@@ -25,10 +27,14 @@ git merge origin/master
 git submodule update --remote src/main/proto
 ```
 
+
+
 执行 <code>git pull</code> 拉取代码后, 如果子模块(别人)有提交, 应该更新子模块:
 ```shell script
 git submodule update
 ```
+
+
 
 其它:  
 为一个新的仓库添加子模块:  
